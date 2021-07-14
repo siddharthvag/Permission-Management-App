@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".SecondFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TERMS OF USE"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="21sp"
+        android:textColor="#000"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/tandc"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+
+    <TextView
+        android:id="@+id/intro1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/sign"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/intro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro1"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/tandc2"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/intro3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro2"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/tandc3"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/intro4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro3"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/tandc4"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:textStyle="normal" />
+
+
+    <TextView
+        android:id="@+id/intro51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro4"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/tandc51"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/intro5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro51"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/tandc5"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/intro6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/intro5"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:lineSpacingExtra="1.5dp"
+        android:text="@string/tandc6"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:textStyle="normal" />
+
+</RelativeLayout>
+</ScrollView>

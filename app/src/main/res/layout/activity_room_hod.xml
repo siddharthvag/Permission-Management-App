@@ -1,0 +1,214 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleMarginEnd="72dp"
+            app:expandedTitleMarginStart="16dp"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/nav_cover"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:layout_collapseMode="parallax" />
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="72dp"
+            android:paddingTop="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Council"
+                android:textColor="?attr/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/council_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Description Test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Details"
+                android:textColor="?attr/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/place_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Description Test" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Room No"
+                android:textColor="?attr/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/place_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Temporary Data" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Date"
+                android:textColor="?attr/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/place_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Temporary Date" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Time"
+                android:textColor="?attr/colorAccent"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/place_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Temporary Time" />
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TableLayout
+        android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:stretchColumns="*"
+        android:visibility="invisible">
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/accept"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/button3"
+                android:text="ACCEPT"
+                android:textColor="#fff"
+                android:drawableTop="@drawable/ic_check"/>
+
+            <Button
+                android:id="@+id/reject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/button2"
+                android:drawableTop="@drawable/ic_close_black_24dp"
+                android:text="REJECT"
+                android:textColor="#fff"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/accepted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_gravity="bottom"
+        android:visibility="invisible">
+
+        <TableRow>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="ACCEPTED"
+                android:textColor="#fff"
+                android:background="@drawable/button3"
+                android:drawableLeft="@drawable/ic_check"/>
+        </TableRow>
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/rejected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:layout_gravity="bottom"
+        android:visibility="invisible">
+
+        <TableRow>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="REJECTED"
+                android:textColor="#fff"
+                android:background="@drawable/button2"
+                android:drawableLeft="@drawable/ic_close_black_24dp"/>
+        </TableRow>
+    </TableLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

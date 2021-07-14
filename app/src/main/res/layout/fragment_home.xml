@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment"
+    android:background="#fff"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+        <LinearLayout
+            android:background="#42A5F5"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="130dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@string/nav_header_desc"
+                android:src="@drawable/ic_launcher_foreground"
+                />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="21sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/email1"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="italic"
+                android:text="Email"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recent Activity"
+        android:textColor="#000"
+        android:fontFamily="@font/montserrat"
+        android:textStyle="italic"
+        android:layout_margin="10dp" />
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:indeterminateTint="@color/colorPrimary"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
+            android:layout_toRightOf="@id/progress"
+            android:fontFamily="@font/montserrat"
+            android:text="Loading Activity"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/l3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/l2"
+            android:fontFamily="@font/montserrat"
+            android:layout_margin="15dp"
+            android:text="No Recent Activity! Click the + button to create a new Permission"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/main_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+</LinearLayout>

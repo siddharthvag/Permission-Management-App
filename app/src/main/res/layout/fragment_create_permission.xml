@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingEnd="16dp"
+            android:paddingStart="6dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/ic_close_black_24dp" />
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical">
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context="com.somaiya.permissions.MainActivity"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@id/text"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Permission"
+                android:fontFamily="@font/montserrat"
+                android:textColor="#000"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <EditText
+                android:id="@+id/t2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit"
+                android:hint="Event name"
+                android:textColor="#000"
+                android:textColorHint="#000"/>
+
+
+
+            <EditText
+                android:id="@+id/text2"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/t2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit"
+                android:hint="Council/Department name"
+                android:textColor="#000"
+                android:textColorHint="#000"/>
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="150dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="15dp"
+                android:layout_alignLeft="@id/text2"
+                android:layout_below="@id/text2"
+                android:textColor="#000"
+                android:background="@drawable/edit">
+
+            </Spinner>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/check"
+                android:text="CHECK PREVIOUS"
+                android:background="@drawable/button"
+                android:textColor="#fff"
+                android:layout_toRightOf="@id/spinner"
+                android:layout_below="@id/text2"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="350dp"
+                android:layout_height="51dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/spinner"
+                android:layout_marginTop="15dp"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:text=" "
+                android:background="@drawable/edit"
+
+                />
+
+            <TextView
+                android:id="@+id/in_date"
+                android:layout_width="351dp"
+                android:layout_height="51dp"
+                android:layout_alignLeft="@id/text1"
+                android:layout_below="@id/text1"
+                android:background="@drawable/edit"
+                android:layout_marginTop="15dp"
+                android:textColor="#000"
+                android:hint="Select Date"
+                android:textSize="17sp"
+                android:textColorHint="#000"/>
+
+            <TextView
+                android:id="@+id/in_time"
+                android:layout_width="150dp"
+                android:layout_height="51dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignLeft="@id/in_date"
+                android:layout_below="@id/in_date"
+                android:background="@drawable/edit"
+                android:textColor="#000"
+                android:layout_marginTop="15dp"
+                android:textSize="17sp"
+                android:hint="Start Time"
+                android:textColorHint="#000"/>
+
+            <TextView
+                android:id="@+id/in_time2"
+                android:layout_width="151dp"
+                android:layout_height="51dp"
+                android:layout_alignLeft="@id/in_time"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="204dp"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/in_date"
+                android:textColor="#000"
+                android:textSize="17sp"
+                android:background="@drawable/edit"
+                android:hint="End Time"
+                android:textColorHint="#000"/>
+
+            <Button
+                android:id="@+id/bu1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/te3"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button"
+                android:text="Create Permission"
+                android:textColor="#fff"/>
+
+            <EditText
+                android:id="@+id/te3"
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:layout_alignLeft="@id/in_time"
+                android:hint="Description"
+                android:textColorHint="#000"
+                android:textColor="#000"
+                android:layout_below="@id/in_time"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edit"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <TextView
+                android:id="@+id/tandc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="italic"
+                android:layout_below="@id/bu1"
+                android:text="By clicking submit button you accept the terms and conditions"
+                android:textColor="#000"/>
+
+
+
+        </RelativeLayout>
+        </ScrollView>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
